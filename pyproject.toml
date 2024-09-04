@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "greg-prk"
+version = "0.1.0"
+description = ""
+authors = ["greg-prk <greg.prk@kakaocorp.com>"]
+packages = [
+  { include = "rag_agent", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain-community = "^0.2.16"
+tiktoken = "^0.7.0"
+chromadb = "^0.5.5"
+langchain = "^0.2.16"
+langchainhub = "^0.1.21"
+langgraph = "^0.2.16"
+tavily-python = "^0.4.0"
+langchain-text-splitters = "^0.2.4"
+arxiv = "^2.1.3"
+langchain-openai = "^0.1.23"
+pymupdf = "^1.24.10"
+faiss-cpu = "^1.8.0.post1"
+bs4 = "^0.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+pycln = "^2.4.0"
+mypy = "^1.11.2"
+ruff = "^0.6.3"
+
+[tool.poetry.scripts]
+rag = 'rag_agent.main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
