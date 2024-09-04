@@ -1,8 +1,6 @@
 import sys
 from pprint import pprint
 
-from dotenv import load_dotenv
-
 from rag_agent.workflow import workflow
 
 
